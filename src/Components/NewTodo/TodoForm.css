@@ -1,0 +1,48 @@
+.new-todo__controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.new-todo__control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.new-todo__control input {
+  width: 100%;
+  border: none;
+  height: 6rem;
+  font-size: 2rem;
+  border-radius: 9px;
+  padding: 0 1rem;
+}
+
+.new-todo__control label {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.new-todo__actions {
+  display: flex;
+  gap: 2rem;
+  align-self: end;
+}
+
+.btn {
+  border-radius: 9px;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0 4rem;
+  height: 6rem;
+  color: #eee;
+  background-color: brown;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(78, 20, 20);
+  transition: all 0.9s;
+}

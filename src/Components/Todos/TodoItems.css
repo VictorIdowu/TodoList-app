@@ -1,0 +1,12 @@
+.to-do__text {
+  background-color: black;
+  color: #eee;
+}
+
+.to-do__text h3 {
+  font-size: 2.4rem;
+}
+
+.to-do__text p {
+  font-size: 1.6rem;
+}
