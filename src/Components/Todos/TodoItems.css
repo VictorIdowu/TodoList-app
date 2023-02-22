@@ -1,6 +1,21 @@
+.to-do__item {
+  background-color: rgb(186, 125, 125);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.to-do__item-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
 .to-do__text {
-  background-color: black;
-  color: #eee;
+  margin: 0;
+  justify-self: center;
+  align-self: end;
 }
 
 .to-do__text h3 {
@@ -9,4 +24,37 @@
 
 .to-do__text p {
   font-size: 1.6rem;
+}
+
+.to-do__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: start;
+  justify-content: center;
+}
+
+.to-do__date p,
+input {
+  font-size: 1.4rem;
+}
+
+.to-do__item input {
+  justify-self: end;
+  width: 2.4rem;
+  height: 2.4rem;
+  accent-color: aquamarine;
+  border: none;
+}
+
+.item-icon {
+  font-size: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.item-icon:hover,
+.item-icon:active {
+  color: aquamarine;
+  transition: all 0.9s;
 }

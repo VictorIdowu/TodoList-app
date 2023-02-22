@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const dummyTodoItems = [
   {
-    title: "Work Out",
+    title: "Work-Out",
     description: "Do 25 Push-ups and 10min Planking",
     date: new Date(2021, 5, 12),
     id: "td1",
@@ -21,9 +21,15 @@ const dummyTodoItems = [
 function App() {
   const [todoItems, setTodoItems] = useState(dummyTodoItems);
 
+  const addExpenseHandler = (todoItem) => {
+    setTodoItems((prevTodoItems) => {
+      return [todoItem, ...prevTodoItems];
+    });
+  };
+
   return (
     <div className="App">
-      <NewTodo />
+      <NewTodo onAddTodo={addExpenseHandler} />
       <Todo items={todoItems} />
     </div>
   );

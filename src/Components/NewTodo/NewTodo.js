@@ -3,7 +3,7 @@ import TodoForm from "./TodoForm";
 import { useState } from "react";
 import Card from "../UI/Card";
 
-const NewTodo = () => {
+const NewTodo = (props) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const openTodoFormHandler = () => {
@@ -14,6 +14,15 @@ const NewTodo = () => {
     setIsEditing(false);
   };
 
+  const saveTodoDataHandler = (enteredTodoData) => {
+    const todoData = {
+      ...enteredTodoData,
+      id: Math.random().toString(),
+    };
+    props.onAddTodo(todoData);
+    setIsEditing(false);
+  };
+
   return (
     <Card className="new-todo">
       {!isEditing && (
@@ -21,7 +30,12 @@ const NewTodo = () => {
           Create new Items
         </button>
       )}
-      {isEditing && <TodoForm onCancel={closeTodoFormHandler} />}
+      {isEditing && (
+        <TodoForm
+          onSaveTodoData={saveTodoDataHandler}
+          onCancel={closeTodoFormHandler}
+        />
+      )}
     </Card>
   );
 };

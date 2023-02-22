@@ -1,12 +1,21 @@
 import "./SearchTodo.css";
 import { FaSearch } from "react-icons/fa";
 
-const SearchTodo = () => {
+const SearchTodo = (props) => {
+  const searchHandler = (e) => {
+    props.onSearchTitle(e.target.value);
+  };
+
   return (
     <div className="search">
       <FaSearch className="icon" />
 
-      <input type="text" placeholder="Search" className="search-todo" />
+      <input
+        onChange={searchHandler}
+        type="text"
+        placeholder="Search"
+        className="search-todo"
+      />
     </div>
   );
 };
