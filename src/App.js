@@ -1,6 +1,7 @@
 import NewTodo from "./Components/NewTodo/NewTodo";
 import Todo from "./Components/Todos/Todo";
 import { useState } from "react";
+import Card from "./Components/UI/Card";
 
 const dummyTodoItems = [
   {
@@ -28,10 +29,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Card className="App">
       <NewTodo onAddTodo={addExpenseHandler} />
       <Todo items={todoItems} />
-    </div>
+    </Card>
   );
 }
 

@@ -11,14 +11,15 @@ const Todo = (props) => {
     setTitle(enteredTitle);
   };
 
-  // const filteredTodo = props.items.filter((todo) => {
-  //   return todo.title === title;
-  // });
+  const filteredTodo = props.items.filter((todo) => {
+    return todo.title.toLowerCase().includes(title);
+  });
 
   return (
     <Card className="todo">
       <SearchTodo onSearchTitle={saveTitleHandler} />
-      <TodoList items={props.items} />
+      <h1>Your To-do Items</h1>
+      <TodoList items={filteredTodo} searchInput={title} />
     </Card>
   );
 };

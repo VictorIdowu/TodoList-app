@@ -4,8 +4,9 @@
   flex-direction: column;
 }
 
-.to-do__list h1 {
+.todo-list__fallback {
   margin-top: 6.8rem;
-  font-size: 2.4rem;
-  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: rgb(186, 125, 125);
+  text-align: center;
 }

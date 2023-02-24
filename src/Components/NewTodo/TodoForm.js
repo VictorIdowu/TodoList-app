@@ -31,7 +31,7 @@ const TodoForm = (props) => {
         <div className="new-todo__control">
           <label>Title</label>
           <input
-            maxlength="20"
+            maxLength="20"
             type="text"
             value={enteredTitle}
             onChange={titleChangeHandler}

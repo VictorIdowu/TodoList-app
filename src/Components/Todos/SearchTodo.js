@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 const SearchTodo = (props) => {
   const searchHandler = (e) => {
-    props.onSearchTitle(e.target.value);
+    props.onSearchTitle(e.target.value.toLowerCase());
   };
 
   return (

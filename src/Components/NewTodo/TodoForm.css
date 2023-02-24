@@ -46,6 +46,6 @@
 
 .btn:hover,
 .btn:active {
-  background-color: rgb(78, 20, 20);
+  background-color: rgb(113, 63, 63);
   transition: all 0.9s;
 }

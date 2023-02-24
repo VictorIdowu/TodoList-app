@@ -6,6 +6,10 @@
   padding: 2rem;
 }
 
+.checked {
+  filter: brightness(30%);
+}
+
 .to-do__item-main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

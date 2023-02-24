@@ -2,9 +2,16 @@ import "./TodoList.css";
 import TodoItems from "./TodoItems";
 
 const TodoList = (props) => {
+  if (props.items.length === 0) {
+    return (
+      <h2 className="todo-list__fallback">
+        You do not have any item that matches "{props.searchInput}"
+      </h2>
+    );
+  }
+
   return (
     <ul className="to-do__list">
-      <h1>Your To-do Items</h1>
       {props.items.map((todo) => (
         <TodoItems
           key={todo.id}
